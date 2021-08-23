@@ -1,0 +1,22 @@
+.result__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-gap: 1rem;
+}
+.result_head {
+  padding: 2rem 0.5rem;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card {
+  overflow: hidden;
+}
+.card-img-top {
+  transition: all 1s;
+}
+.card-img-top:hover {
+  transform: scale(1.03);
+}

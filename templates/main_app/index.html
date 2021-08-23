@@ -1,0 +1,45 @@
+{% extends "base/base.html" %} {% load static %}
+
+<!-- Style-->{% block style %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />{% endblock %}
+
+<!-- Body -->{% block content %}
+<main class="container">
+  <div class="p-5 text-center">
+    <h1 class="mb-3">What ever you want,</h1>
+    <h4 class="mb-3">just geddit!</h4>
+  </div>
+  <form action="{% url 'new_search' %}" method="post" class="search-form">
+    {% csrf_token %}
+
+    <div class="input-group">
+      <div class="form-outline">
+        <input
+          id="search-input"
+          type="search"
+          class="form-control validate"
+          name="search"
+          required
+        />
+        <label class="form-label" for="search-input">Search</label>
+      </div>
+      <button id="search-button" type="submit" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </form>
+
+  <div class="row">
+    <div class="col s4">
+      <!-- Promo Content 1 goes here -->
+    </div>
+    <div class="col s4">
+      <!-- Promo Content 2 goes here -->
+    </div>
+    <div class="col s4">
+      <!-- Promo Content 3 goes here -->
+    </div>
+  </div>
+</main>
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock %}

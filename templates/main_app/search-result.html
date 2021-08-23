@@ -1,0 +1,22 @@
+{% extends "base/base.html" %} {% load static %}
+<!-- Style-->{% block style %}
+<link rel="stylesheet" href="{% static 'css/result-page.css' %}" /> {%endblock%}
+
+<!-- Body -->{% block content %}
+<main class="container">
+  <h1 class="result__head">Results for "{{ search }}"</h1>
+  <div class="result__list">
+    {% for card in result %}
+    <div class="card">
+      <img src="{{card.img}}" class="card-img-top" alt="{{card.name}}" />
+      <div class="card-body">
+        <p class="card-text">{{card.name}}</p>
+        <h5 class="card-title">{{card.price}}</h5>
+        <a href="{{card.link}}" class="btn btn-primary">View Detail</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</main>
+
+{% endblock %}
