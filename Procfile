@@ -1,0 +1,1 @@
+web: gunicorn geddit.wsgi --log-file -
