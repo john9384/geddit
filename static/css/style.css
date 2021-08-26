@@ -1,3 +1,47 @@
-@import "base.css";
-@import "home.css";
-@import "result-page.css";
+body {
+  max-width: 100vw;
+}
+.search-form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.form-outline {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 400px) {
+  .search-form {
+    width: 250px;
+  }
+}
+.result__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-gap: 1rem;
+  justify-content: space-around;
+  justify-items: center;
+}
+.result_head {
+  padding: 2rem 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card {
+  overflow: hidden;
+}
+.card-img-top {
+  transition: all 1s;
+}
+.card-img-top:hover {
+  transform: scale(1.03);
+}
