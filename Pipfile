@@ -12,6 +12,7 @@ gunicorn = "*"
 psycopg2 = "*"
 pytz = "*"
 whitenoise = "*"
+requests = "*"
 
 [dev-packages]
 
